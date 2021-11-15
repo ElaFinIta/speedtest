@@ -18,6 +18,9 @@ Stop the game by pressing STOP.
 
 ## Screenshots:
 
+![screenshot of the single page application](screenshot.png?raw=true "Screenshot of the single page application")
+
+![screenshot of the single page application](screenshotGameOver.png?raw=true "Screenshot of the single page application")
 
 ### Credits:
 
