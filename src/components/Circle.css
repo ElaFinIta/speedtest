@@ -1,0 +1,26 @@
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 1rem;
+    background-color: rgb(99, 93, 93);
+}
+
+/* .pink {
+    background-color: rgb(255, 0, 170);
+}
+
+.green {
+    background-color: rgb(56, 198, 56);
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.lightblue {
+    background-color: rgb(37, 174, 176); 
+} */
