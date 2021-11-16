@@ -16,7 +16,7 @@ Click on the circle showing the uncorn as fast as possible to feed it with a rai
 If you click the wrong circle, you will GAME OVER.
 If you miss 5 highlighted circles, you will GAME OVER.
 
-Stop can stop the game by pressing STOP.
+You can stop the game by pressing STOP.
 
 
 ## Screenshots:
