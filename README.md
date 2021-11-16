@@ -25,7 +25,10 @@ You can stop the game by pressing STOP.
 
 ![screenshot of the single page application](screenshotGameOver.png?raw=true "Screenshot of the single page application")
 
+## Screen recording:
 
-  ## Credits:
+https://user-images.githubusercontent.com/88823568/142052998-47354277-5d9a-4142-80b6-14333c72e001.mov
+
+## Credits:
 
   - Sounds effects from https://www.zapsplat.com/
