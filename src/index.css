@@ -19,7 +19,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   padding: 5rem;
-  background-image: url("./assets/cesar-couto-27HiryxnHJk-unsplash.jpg");
+  background: linear-gradient(#e45bbb, #84dedc);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -32,6 +32,7 @@ button {
   background-color: --button-color;
   margin: 1rem;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 h1, 
@@ -53,7 +54,11 @@ p {
 
 .active {
   box-shadow: 0 0 25px snow;
-  border: 15px solid snow;
+  /* border: 15px solid snow; */
+  background-image: url("/src/assets/horse-3d-colorful.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
 }
 
 /***** GAME OVER popup area *****/
@@ -71,29 +76,32 @@ p {
   align-items: center;
 }
 
+.popup h1, 
+.popup p {
+  margin: 1rem;
+}
+
 .popup {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: black;
-  width: 60%;
-  height: 60%;
+  padding: 2rem;
   background-color: white;
 }
 
-.popup p,
-.popup h1 {
-  display: block;
-  padding-left: 2rem;
-}
-
-.popup h1 {
-  padding-top: 3rem;
-}
-
 .close {
-  margin: 1rem;
-  padding: 1rem;
-  width: 3rem;
-  height: 3rem;
+  align-self: flex-end;
+  padding: 0.5rem 0.5rem;
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.rainbowField {
+  display: flex;
+  justify-content: center;
+}
+
+.rainbow {
+  margin: 0.3rem;
 }
