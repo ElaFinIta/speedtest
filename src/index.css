@@ -10,6 +10,9 @@
   --special-font: 'Press Start 2P', cursive;
   --button-color: rgb(220, 209, 209);
 }
+html {
+ height: 100%;
+}
 
 body {
   margin: 0;
@@ -18,11 +21,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  padding: 5rem;
   background: linear-gradient(#e45bbb, #84dedc);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 10vh;
 }
 
 button {
@@ -104,4 +106,12 @@ p {
 
 .rainbow {
   margin: 0.3rem;
+}
+
+
+@media only screen and (max-width: 890px) {
+  h1, 
+  p {
+    margin: 1rem auto;
+  }
 }
