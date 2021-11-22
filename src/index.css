@@ -24,7 +24,7 @@ body {
   background: linear-gradient(#e45bbb, #84dedc);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 10vh;
+  height: 100%;
 }
 
 button {
@@ -113,5 +113,9 @@ p {
   h1, 
   p {
     margin: 1rem auto;
+  }
+
+  .rainbow {
+    margin: 0.2rem;
   }
 }
