@@ -88,8 +88,26 @@ p {
   flex-direction: column;
   justify-content: center;
   color: black;
+  position: absolute;
   padding: 2rem;
   background-color: white;
+  top: -400px;
+  transform-origin: top right;
+  animation: drop 0.5s ease forwards,
+             swing 2s 1s ease-in both;
+}
+
+@keyframes drop {
+  0%{opacity: 0}
+  70%{transform: translateY(700px)}
+  100%{transform: translateY(650px); opacity: 1}
+}
+
+@keyframes swing {
+  0%{transform: rotateZ(0deg)}
+  10%{transform: translateY(650px) rotateZ(-5deg)}
+  15%{transform: translateY(650px) rotateZ(-10deg)}
+  100%{transform: translateY(650px) rotateZ(0deg)}
 }
 
 .close {

@@ -32,3 +32,5 @@ https://user-images.githubusercontent.com/88823568/142052998-47354277-5d9a-4142-
 ## Credits:
 
   - Sounds effects from https://www.zapsplat.com/
+
+  - Popup animation tutorial: https://www.youtube.com/watch?v=B0_M1y4aFAQ&list=PL4cUxeGkcC9iGYgmEd2dm3zAKzyCGDtM5&index=11
