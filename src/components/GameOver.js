@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect} from 'react';
+
 
 const GameOver = (props) => {
 
@@ -13,10 +14,22 @@ const GameOver = (props) => {
         }
     }
 
+    const closeOnEscapeKeyDown = (e) => {
+        if ((e.charCode || e.keyCode ) === 27 ) {
+            props.close();
+        }
+    }
+
+    useEffect(() => {
+        document.body.addEventListener('keydown', closeOnEscapeKeyDown)
+    }, [])
+
 
     return (
-        <div className="overlay">
-            <div className="popup">
+        // close on clicking outside popup
+        <div className="overlay" onClick={props.close}> 
+            {/* stop propagatin closing on clicking */}
+            <div className="popup" onClick={e => e.stopPropagation()}>
                 <button className="close" onClick={props.close}>X</button>
                 <h1>Game over</h1>
                 <p>Your score was: {props.score}</p>
