@@ -38,3 +38,5 @@ https://user-images.githubusercontent.com/88823568/142052998-47354277-5d9a-4142-
 - Popup animation tutorial: https://www.youtube.com/watch?v=B0_M1y4aFAQ&list=PL4cUxeGkcC9iGYgmEd2dm3zAKzyCGDtM5&index=11
 
 - Close modal (game over popup) when clicking outside of popup or by pressing ESC key: tutorial by Thi Tran https://medium.com/tinyso/how-to-create-a-modal-component-in-react-from-basic-to-advanced-a3357a2a716a
+
+- Termanty repo for high scores posting to firebase https://github.com/Termanty/SpeedyBats

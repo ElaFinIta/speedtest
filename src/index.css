@@ -97,6 +97,34 @@ p {
              swing 2s 1s ease-in both;
 }
 
+.player {
+  display: inline-block;
+  padding: 0.6rem;
+  width: 40%;
+}
+
+.score_button {
+  display: inline-block;
+  width: 30%;
+}
+
+.score_button:hover {
+  background-color: rgb(95, 90, 90);
+}
+
+/***  HighScores popup ***/
+.highScores {
+  display: grid;
+}
+
+.highScores li {
+  list-style: none;
+}
+
+.highScores p {
+  display: inline-block;
+}
+
 @keyframes drop {
   0%{opacity: 0}
   70%{transform: translateY(700px)}

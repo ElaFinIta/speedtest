@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Circle from './components/Circle';
 import { circles } from "./components/circles";
 import GameOver from './components/GameOver';
+import HighScores from './components/HighScores';
 import startSound from "./assets/sounds/startSound.mp3";
 import gameOver from "./assets/sounds/gameOver.mp3";
 import clickSound from "./assets/sounds/clickSound.mp3";
@@ -20,6 +21,7 @@ class App extends Component {
     score: 0,
     current: 0,
     showGameOver: false,
+    showHighScores: false,
     pace: 1500,
     emptyRounds: 0,
     gameStarted: false
@@ -45,7 +47,7 @@ class App extends Component {
     });
 
     this.timer = setTimeout(this.nextCircle, this.state.pace);
-    console.log(this.state.current);
+    // console.log(this.state.current);
   };
 
   clickHandler = (id) => {
@@ -63,11 +65,13 @@ class App extends Component {
   };
 
   startHandler = () => {
+    this.setState({
+      gameStarted: true,
+      score: 0,
+      pace: 1500
+    });
     gameStartSound.play();
     this.nextCircle();
-    this.setState({
-      gameStarted: true
-    })
   };
 
   stopHandler = () => {
@@ -83,11 +87,16 @@ class App extends Component {
     }) 
   };
 
-  closeHandler = () => {
+  closeGameOverHandler = () => {
     this.setState({
       showGameOver: false,
-      score: 0,
-      pace: 1500
+      showHighScores: true,
+    }) 
+  }
+
+  closeScoresHandler = () => {
+    this.setState({
+      showHighScores: false,
     }) 
   }
 
@@ -111,7 +120,8 @@ class App extends Component {
           <button disabled={this.state.gameStarted} onClick={this.startHandler}>START</button>
           <button onClick={this.stopHandler}>STOP</button>
         </div>
-        {this.state.showGameOver && <GameOver score={this.state.score} close={this.closeHandler}/>}
+        {this.state.showGameOver && <GameOver score={this.state.score} close={this.closeGameOverHandler}/>}
+        {this.state.showHighScores && <HighScores score={this.state.score} close={this.closeScoresHandler}/>}
       </div>
     );
   }
