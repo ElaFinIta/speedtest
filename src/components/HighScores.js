@@ -8,7 +8,7 @@ const HighScores = (props) => {
 
     function Message() {
         getScoresFromDB();
-        return <h1>All times highest scores</h1>;
+        return <h1>Highest scores</h1>;
     }
 
     const closeOnEscapeKeyDown = (e) => {
@@ -27,8 +27,14 @@ const HighScores = (props) => {
         setHighScores(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
       };
 
-    const highestScores = highScores.sort((a, b) => b.score - a.score).slice(0, 3).map((entry) => (
-        <li className="score" key={entry.id}>{`${entry.score} ${entry.player} ${entry.date.toDate().toLocaleDateString()}`}</li>
+    const highestScores = highScores.sort((a, b) => b.score - a.score).slice(0, 3).map((entry, rank) => (
+        // <li className="score" key={entry.id}>{`${entry.score} ${entry.player} ${entry.date.toDate().toLocaleDateString()}`}</li>
+        <>
+            <p>{rank + 1}</p>
+            <p>{entry.player}</p>
+            <p>{entry.score}</p>
+            <p>{entry.date.toDate().toLocaleDateString()}</p>
+        </>
     ))
 
 
@@ -38,15 +44,15 @@ const HighScores = (props) => {
             {/* stop propagatin closing on clicking */}
             <div className="popup" onClick={e => e.stopPropagation()}>
                 <button className="close" onClick={props.close}>X</button>
-                <p>Your score was: {props.score}</p>
                 <Message />
                 <div className="highScores">
-                    {/* <p className="rank">Rank</p>
-                    <p className="player">Player</p>
-                    <p className="score">Score</p>
-                    <p className="date">Date</p> */}
+                    <p>Rank</p>
+                    <p>Player</p>
+                    <p>Score</p>
+                    <p>Date</p>
                     {highestScores}
                 </div>
+                <p>Your score was: {props.score}</p>
             </div>
         </div>
     );

@@ -52,7 +52,7 @@ const GameOver = (props) => {
             <div className="popup" onClick={e => e.stopPropagation()}>
                 <button className="close" onClick={props.close}>X</button>
                 <h1>Game over</h1>
-                <p>Your score was: {props.score}</p>
+                <p className="rainbows">Your score was: {props.score}</p>
                 <div className="input_button">
                     <input type="text" className="player" placeholder="Nickname" required onChange={nickHandler}/>
                     <button className="score_button" onClick={scoreHandler}>SAVE</button>

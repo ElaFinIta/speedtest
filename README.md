@@ -23,7 +23,10 @@ You can stop the game by pressing STOP.
 
 ![screenshot of the single page application](screenshot.png?raw=true "Screenshot of the single page application")
 
-![screenshot of the single page application](screenshotGameOver.png?raw=true "Screenshot of the single page application")
+![screenshot of the single page application](screenshotGameOver.png?raw=true "Screenshot of the game over popup")
+
+![screenshot of the single page application](screenshotScores.png?raw=true "Screenshot of the highest scores popup")
+note: best scores not available in live version. I have not yet figured out how to hide firebase config OR how to set rules for firebase. 
 
 ## Screen recording:
 
